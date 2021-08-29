@@ -43,45 +43,8 @@ const getValidDay =function(start,end){
     return day;
 }
 const getDay=function(month){
-    let day=NaN;
-    switch(month){
-        case 1:
-            day=getValidDay(1,31);
-        break;
-        case 2:
-            day=getValidDay(1,28);
-        break;
-        case 3:
-            day=getValidDay(1,31);
-        break;
-        case 4:
-            day=getValidDay(1,30);
-        break;
-        case 5:
-            day=getValidDay(1,31); 
-        break;
-        case 6:
-            day=getValidDay(1,30); 
-        break;
-        case 7:
-            day=getValidDay(1,31);
-        break;
-        case 8:
-            day=getValidDay(1,31);
-        break;
-        case 9:
-            day=getValidDay(1,30);
-        break;
-        case 10:
-            day=getValidDay(1,31);
-        break;
-        case 11:
-            day=getValidDay(1,30);
-        break;
-        case 12:
-            day=getValidDay(1,31);
-        break;
-    }
+    let months=[31,28,30,30,31,30,31,31,30,31,30,31];
+    let day=getValidDay(1,months[month-1]);    
     return day;
 }
 const getHoroscope=function(day,month){
